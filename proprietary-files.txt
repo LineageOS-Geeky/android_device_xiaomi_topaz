@@ -60,19 +60,19 @@ vendor/lib64/libadm.so
 vendor/lib64/libalsautils.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
--vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
+vendor/lib64/libar-gsl.so
+vendor/lib64/libar-pal.so
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libbatterylistener.so
 vendor/lib64/libhfp_pal.so
 vendor/lib64/liblx-ar_util.so
--vendor/lib64/liblx-osal.so
+vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libsndcardparser.so
--vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio Configs
@@ -99,13 +99,13 @@ vendor/bin/agmcap
 vendor/bin/agmcompressplay
 vendor/bin/agmhostless
 vendor/bin/agmplay
--vendor/lib64/libagm.so
+vendor/lib64/libagm.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio SoundFX
@@ -652,7 +652,7 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
--vendor/lib64/libStDrvInt.so
+vendor/lib64/libStDrvInt.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/libwvaidl.so
@@ -675,7 +675,7 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fastcv
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 
 # Fingerprint
 vendor/etc/permissions/com.fingerprints.extension.xml
@@ -1570,8 +1570,8 @@ vendor/etc/thermal-video.conf
 vendor/etc/thermal-videochat.conf
 vendor/etc/thermald-devices.conf
 vendor/etc/tzlog.dict
--vendor/lib64/liblmthermallistner.so
--vendor/lib64/libthermalclient.so
+vendor/lib64/liblmthermallistner.so
+vendor/lib64/libthermalclient.so
 
 # Time
 vendor/app/TimeService/TimeService.apk
