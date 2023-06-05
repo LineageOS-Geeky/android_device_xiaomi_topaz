@@ -97,7 +97,8 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=4e00000.dwc3
 
 BOARD_KERNEL_CMDLINE := \
-    disable_dma32=on
+    kasan=off \
+    disable_dma32=on \
     rcu_nocbs=all \
     rcutree.enable_rcu_lazy=1
 
