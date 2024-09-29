@@ -230,7 +230,8 @@ vendor.hw.fm.init=0
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fingerprint
-ro.hardware.fp.sideCap=true
+persist.vendor.fingerprint.type=side
+persist.vendor.fingerprint.sensor_location=1080|920|155
 
 # Gatekeeper
 vendor.gatekeeper.is_security_level_spu=0
