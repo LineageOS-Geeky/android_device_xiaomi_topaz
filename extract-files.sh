@@ -16,6 +16,11 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
+# Define the default patchelf version used to patch blobs
+# This will also be used for utility functions like FIX_SONAME
+# Older versions break some camera blobs for us
+export PATCHELF_VERSION=0_17_2
+
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
@@ -64,7 +69,7 @@ function blob_fixup() {
             grep -q "libinput_shim.so" "${2}" || "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
             ;;
         system_ext/lib64/libwfdservice.so)
-            "${PATCHELF_0_17_2}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V4-cpp.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V4-cpp.so" "${2}"
             ;;
         vendor/bin/hw/android.hardware.security.keymint-service-qti|vendor/lib64/libqtikeymint.so)
             [ "$2" = "" ] && return 0
@@ -72,7 +77,7 @@ function blob_fixup() {
             ;;
         vendor/lib64/vendor.libdpmframework.so)
             [ "$2" = "" ] && return 0
-            grep -q "libhidlbase_shim.so" "${2}" || "${PATCHELF_0_17_2}" --add-needed "libhidlbase_shim.so" "${2}"
+            grep -q "libhidlbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
             ;;
         vendor/etc/seccomp_policy/atfwd@2.0.policy)
             [ "$2" = "" ] && return 0
