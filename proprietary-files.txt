@@ -549,7 +549,7 @@ vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiag.so
 vendor/lib64/libdiagjni.so
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display Calibrations
 vendor/etc/mdss_dsi_panel_m7_38_0c_0a_fhdp_video_mi.xml
