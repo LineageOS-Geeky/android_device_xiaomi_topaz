@@ -287,7 +287,7 @@ vendor/lib64/libarcsoft_supernight.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libc++_shared.so
-vendor/lib64/libc++_shared_vf.so
+vendor/lib64/libc++_shared_vf.so;FIX_SONAME
 vendor/lib64/libcalculator.so
 vendor/lib64/libcalculator_htp.so
 vendor/lib64/libcamera_nn_stub.so
@@ -664,8 +664,8 @@ vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/etc/permissions/qti_fingerprint_interface.xml
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/hw/fingerprint.fpc.default.so
-vendor/lib64/hw/fingerprint.goodix.default.so
-vendor/lib64/libdmabufheapfpc.so
+vendor/lib64/hw/fingerprint.goodix.default.so;FIX_SONAME
+vendor/lib64/libdmabufheapfpc.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
