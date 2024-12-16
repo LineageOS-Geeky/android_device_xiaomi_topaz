@@ -531,58 +531,47 @@ vendor/lib64/libdiagjni.so
 vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display Calibrations
+vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/mdss_dsi_panel_m7_38_0c_0a_fhdp_video_mi.xml
 vendor/etc/mdss_dsi_panel_m7_38_0c_0b_fhdp_video_mi.xml
 vendor/etc/qdcm_calib_data_m7_38_0c_0a_video_mode_fhdp_dsi_panel.xml
 vendor/etc/qdcm_calib_data_m7_38_0c_0b_video_mode_fhdp_dsi_panel.xml
 
-# Display
+# Display - from Seahawk_02US-user 14 UKQ1.231025.001 02US_1_07F release-keys
+vendor/bin/qdcmss|241fb582c3aec0745ae818f191020bbf73da4787
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor/lib64/libdisplayconfig.qti.so|863c8dd0e66b1850f3debf224090f4c03639aa52
+vendor/lib64/libdisplayqos.so|f577d7ef1941e58bb09952269929b3e2cea8a418
+vendor/lib64/libdisplayskuutils.so|224f3231c93f011af6799c01420564d10df06aed
+vendor/lib64/libdpps.so|5c75a6d68f9547b19aaf6acde58ce13680545092
+vendor/lib64/libhdr_tm.so|0bd53cf134df3648443a69f69106cb75260c65e2
+vendor/lib64/libhistogram.so|5e45d99889c8a9702c329a87b30893c013f11587
+vendor/lib64/libqdutils.so|6eba7db2ebe4049f25648dc1e6875e92fcad78e6
+vendor/lib64/libqseed3.so|729177a209f7e0c32887e4666272fa75bd42b253
+vendor/lib64/libsdedrm.so|5759f73bdd0d2018d99f1efb5421eb480317059b
+vendor/lib64/libsdm-color.so|a8b5dc76d877903153586a2103e57f9b8a67e0fe
+vendor/lib64/libsdm-colormgr-algo.so|271ed8499fd20ce151cc8a5a43c8cbda2bb489eb
+vendor/lib64/libsdm-disp-vndapis.so|7d67c6de1723516488fb20fe3e7b9f222dd63d5e
+vendor/lib64/libsdmcore.so|aa7921431288c87345a5b71367c167a4221a759f
+vendor/lib64/libsdmextension.so|1f51fcd1541fac96f1e176034aa8eef07dcf3319
+vendor/lib64/libsdmutils.so|69579e8c82514f0ac9509476ef86b14618fedd77
+
+# Display postprocessing - from Seahawk_02US-user 14 UKQ1.231025.001 02US_1_07F release-keys
+vendor/bin/hw/vendor.display.color@1.0-service|f3e4123fa5b9d096c1131866eef46ee92da787b5
+vendor/bin/ppd|e2621c0da901eb3f6b4625cd30b25d9291cb452d
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib64/libdisp-aba.so|f4d494d577e30716af66dade89b44cf066941229
+vendor/lib64/vendor.display.color@1.0.so|41f00e49bf2cdcefe57223936f830affaf46c262
+vendor/lib64/vendor.display.color@1.1.so|5b3bdc0a0f2202bf737a7360474b6813af3c77ae
+vendor/lib64/vendor.display.color@1.2.so|999e3f12f24abc1b783358aaefaf42193127f274
+vendor/lib64/vendor.display.color@1.3.so|b77684e8a2e7389477170d76b58c9ef3486623f4
+vendor/lib64/vendor.display.color@1.4.so|bc13a5572c57129db95c1f8c4083f76a7da85f13
+vendor/lib64/vendor.display.color@1.5.so|360dba6750c3d6757a53439c1d52ae8ccbcde4c7
+vendor/lib64/vendor.display.postproc@1.0.so|86172f9c6f31f1e5c7408c38b96134ccb8f37a10
+
+# Displayconfig
 product/etc/displayconfig/display_id_4630946444529356673.xml:vendor/etc/displayconfig/display_id_4630946444529356673.xml
 product/etc/displayconfig/display_id_4630946914797301377.xml:vendor/etc/displayconfig/display_id_4630946914797301377.xml
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-vendor/bin/init.qti.display_boot.sh
-vendor/bin/ppd
-vendor/bin/qdcmss
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/init/init.qti.display_boot.rc
-vendor/etc/init/qdcmss.rc
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayconfig.qti.so
-vendor/lib64/libdisplaydebug.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libdpps.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libhistogram.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libqsocket.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libsdmutils.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
-
-# Displayfeature
-vendor/bin/displayfeature
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
-vendor/lib64/hw/displayfeature.default.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib64/libdisplayfeature.so
-vendor/lib64/libdisplayfeatureservice.so
 
 # DPM
 system_ext/bin/dpmd
@@ -1282,9 +1271,9 @@ vendor/lib64/libqcrildataqos.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqdpr.so
-vendor/lib64/libqdutils.so
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqrtr.so
+vendor/lib64/libqsocket.so
 vendor/lib64/librcc.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
