@@ -52,8 +52,11 @@ function lib_to_package_fixup_vendor_variants() {
             vendor.qti.hardware.wifidisplaysession@1.0)
             echo "$1_vendor"
             ;;
-        libpalclient | \
-            libwpa_client)
+        libagmclient | \
+            libagmmixer | \
+            libpalclient | \
+            libwpa_client | \
+            vendor.qti.hardware.pal@1.0-impl)
             ;;
         *)
             return 1
