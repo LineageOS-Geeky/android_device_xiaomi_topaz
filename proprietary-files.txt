@@ -915,6 +915,16 @@ vendor/lib64/vendor.qti.latency@2.2.so
 # IPA
 vendor/etc/init/ipa_fws.rc
 
+# Kernel
+vendor/bin/init.kernel.post_boot-bengal-iot.sh
+vendor/bin/init.kernel.post_boot-bengal.sh
+vendor/bin/init.kernel.post_boot.sh
+vendor/bin/init.qti.kernel.debug-bengal.sh
+vendor/bin/init.qti.kernel.debug.sh
+vendor/bin/init.qti.kernel.sh
+vendor/bin/vendor_modprobe.sh
+vendor/etc/init/hw/init.qti.kernel.rc
+
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc

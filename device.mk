@@ -217,7 +217,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom.vendor_ramdisk \
     init.qcom.rc \
-    init.qti.kernel.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     init.xiaomi.rc \
@@ -226,19 +225,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.goodix.events.sh \
-    init.kernel.post_boot-bengal.sh \
-    init.kernel.post_boot-bengal-iot.sh \
-    init.kernel.post_boot.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
     init.qti.dcvs.sh \
     init.qti.early_init.sh \
-    init.qti.kernel.sh \
     init.qti.write.sh \
-    system_dlkm_modprobe.sh \
-    vendor_modprobe.sh
+    system_dlkm_modprobe.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
