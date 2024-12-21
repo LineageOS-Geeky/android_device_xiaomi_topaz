@@ -332,7 +332,6 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libvideofilter_only.so
-vendor/lib64/libvideotxr.so
 vendor/lib64/libvideoutils.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libvidhance_ldc.so
