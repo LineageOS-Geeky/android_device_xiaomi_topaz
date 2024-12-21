@@ -1154,11 +1154,6 @@ vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices.so
 
-# QSAP
-vendor/bin/qsap_qapeservice
-vendor/etc/init/vendor.qsap.qapeservice.rc
-vendor/etc/seccomp_policy/qsap_qapeservice.policy
-
 # QTI
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
