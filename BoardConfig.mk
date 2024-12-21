@@ -245,8 +245,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifes
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/vintf/manifest.xml \
     $(DEVICE_PATH)/configs/vintf/network_manifest.xml \
-    hardware/qcom-caf/sm6225/audio/primary-hal/configs/common/manifest_non_qmaa.xml \
-    hardware/qcom-caf/sm6225/audio/primary-hal/configs/common/manifest_non_qmaa_extn.xml
+    hardware/qcom-caf/sm6225/audio/primary-hal/configs/common/manifest_non_qmaa.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # WiFi
