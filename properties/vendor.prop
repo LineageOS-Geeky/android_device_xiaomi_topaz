@@ -102,6 +102,8 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
+vendor.qc2audio.per_frame.flac.dec.enabled=true
+vendor.qc2audio.suspend.enabled=true
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
@@ -135,57 +137,16 @@ ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 camera.disable_zsl_mode=1
-sys.haptic.ignoreWhenCamera=true
-
-# Charger
-persist.vendor.quick.charge=1
-
-# Codec C2
-debug.c2.use_dmabufheaps=1
-debug.stagefright.c2inputsurface=-1
-vendor.qc2audio.per_frame.flac.dec.enabled=true
-vendor.qc2audio.suspend.enabled=true
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# DPM
-persist.vendor.dpm.vndr.feature=1
-persist.vendor.dpm.vndr.halservice.enable=1
-persist.vendor.dpm.vndr.idletimer.mode=default
-
-# DRM
-drm.service.enabled=true
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
 
 # Display
-debug.egl.hw=0
-debug.mdpcomp.logs=0
-debug.sf.enable_advanced_sf_phase_offset=1
-debug.sf.enable_hwc_vds=0
-debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
-debug.sf.high_fps_early_phase_offset_ns=-5000000
-debug.sf.high_fps_late_app_phase_offset_ns=1000000
-debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
-debug.sf.hw=0
-debug.sf.latch_unsignaled=1
-debug.sf.predict_hwc_composition_strategy=0
-debug.sf.treat_170m_as_sRGB=1
-persist.sys.sf.color_mode=268
-persist.sys.sf.color_saturation=1.0
-persist.sys.sf.native_mode=258
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.has_wide_color_display=false
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.max_virtual_display_dimension=4096
-ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_touch_timer_ms=200
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.enable_frame_rate_override=false
-ro.surface_flinger.wcg_composition_dataspace=143261696
-ro.vendor.display.type=oled
 vendor.display.camera_noc_efficiency_factor=0.70
 vendor.display.comp_mask=8192
 vendor.display.disable_excl_rect=0
@@ -199,7 +160,6 @@ vendor.display.disable_scaler=0
 vendor.display.enable_allow_idle_fallback=1
 vendor.display.enable_async_powermode=1
 vendor.display.enable_camera_smooth=1
-vendor.display.enable_default_color_mode=0
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 vendor.display.enable_posted_start_dyn=1
@@ -208,40 +168,77 @@ vendor.display.normal_noc_efficiency_factor=0.85
 vendor.display.secure_preview_buffer_format=420_sp
 vendor.display.use_smooth_motion=1
 vendor.display.vds_allow_hwc=1
-vendor.gralloc.disable_ubwc=0
-vendor.gralloc.secure_preview_buffer_format=420_sp
+
+# DPM
+persist.vendor.dpm.vndr.feature=1
+persist.vendor.dpm.vndr.halservice.enable=1
+persist.vendor.dpm.vndr.idletimer.mode=default
+
+# DRM
+drm.service.enabled=true
 
 # FM
 vendor.hw.fm.init=0
-
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fingerprint
 persist.vendor.fingerprint.type=side
 persist.vendor.fingerprint.sensor_location=1080|980|155|local:4630946914797301377,1080|980|155|local:4630946444529356673
 
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
 # Gatekeeper
 vendor.gatekeeper.is_security_level_spu=0
 
 # Graphics
+debug.egl.hw=0
+debug.mdpcomp.logs=0
+debug.sf.auto_latch_unsignaled=0
+debug.sf.enable_advanced_sf_phase_offset=1
+debug.sf.enable_hwc_vds=0
+debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
+debug.sf.high_fps_early_phase_offset_ns=-5000000
+debug.sf.high_fps_late_app_phase_offset_ns=1000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
+debug.sf.hw=0
+debug.sf.latch_unsignaled=1
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.treat_170m_as_sRGB=1
 graphics.gpu.profiler.support=true
+persist.sys.sf.color_mode=268
+persist.sys.sf.color_saturation=1.0
+persist.sys.sf.native_mode=258
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
+ro.surface_flinger.enable_frame_rate_override=false
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=false
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
+ro.vendor.all_modes.colorpick_adjust=true
+vendor.gralloc.disable_ubwc=0
+vendor.gralloc.secure_preview_buffer_format=420_sp
 
-# Keystore
-ro.hardware.keystore_desede=true
+# Haptics
+sys.haptic.ignoreWhenCamera=true
+sys.haptic.unblockWhenCamera=true
 
-# Log
-ro.control_privapp_permissions=enforce
+# Incremental
+ro.incremental.enable=1
 
 # Media
+debug.c2.use_dmabufheaps=1
+debug.stagefright.c2inputsurface=-1
 vendor.media.omx=0
-vendor.mm.enable.qcom_parser=16711663
 
-# Netflix
-vendor.netflix.bsp_rev=Q6115-31409-1
+# Misc
+sys.vendor.shutdown.waittime=500
 
 # NFC
 ro.vendor.se.type=HCE,UICC
@@ -249,18 +246,20 @@ ro.vendor.se.type=HCE,UICC
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.3
+ro.vendor.perf.scroll_opt.heavy_app=2
 ro.vendor.perf.scroll_opt=1
-ro.vendor.qspm.enable=true
 vendor.pasr.activemode.enabled=true
-vendor.perf.framepacing.enable=1
 vendor.power.pasr.enabled=true
 
-# QCOM sys
+# QCOM
 persist.vendor.qcomsysd.enabled=1
+
+# QSPM
+ro.vendor.qspm.enable=true
 
 # Radio
 persist.radio.multisim.config=dsds
-persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_con_rprt=1
@@ -271,6 +270,12 @@ persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.snapshot_enabled=1
 persist.vendor.radio.snapshot_timer=5
+ro.telephony.default_network=33,33
+telephony.active_modems.max_count=2
+telephony.lteOnCdmaDevice=1
+
+
+# RCS
 persist.vendor.rcs.singlereg.feature=1
 
 # Sensors
@@ -283,6 +288,7 @@ persist.vendor.sensors.support_direct_channel=false
 # USB
 persist.sys.usb.config=none
 sys.usb.mtp.batchcancel=1
+vendor.usb.controller=4e00000.dwc3
 vendor.usb.diag.func.name=ffs
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.qdss.inst.name=qdss_sw
@@ -292,7 +298,7 @@ vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=0
 
-# Wi-Fi
+# WiFi
 wifi.aware.interface=wifi-aware0
 
 # Zygote

@@ -1,12 +1,12 @@
 # Audio
+aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
-audio.sys.mute.latency.factor=2
-audio.sys.offload.pstimeout.secs=3
+audio.offload.video=true
+media.stagefright.audio.deep=false
 ro.af.client_heap_size_kbyte=7168
 
 # Radio
 persist.vendor.radio.enable_temp_dds=true
-ro.vendor.radio.fastdormancy=true
-ro.vendor.radio.features_common=3
